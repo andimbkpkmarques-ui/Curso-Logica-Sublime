@@ -1,0 +1,15 @@
+<script>
+	let numero
+	let resultado = 0
+	let calculadora = 'sim'
+
+	while(calculadora == 'sim'){
+		numero = parseFloat(prompt('qual numero quer somar?'))
+		resultado += numero
+		alert(`O valor do resultado acumulado é: ${resultado}.`)
+		calculadora = prompt("quer continuar? (sim ou qualquer letra).")
+	}
+	alert(`O valor acumulado foi: ${resultado}.`)
+
+
+</script>

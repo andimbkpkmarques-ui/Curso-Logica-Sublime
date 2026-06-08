@@ -1,0 +1,99 @@
+<script>
+	let aluno=prompt('qual aluno')
+	let email=prompt('qual email do responsavel')
+	let recup
+	let notaA=parseFloat(prompt('qual nota A'))
+	let notaB=parseFloat(prompt('qual nota A'))
+	let notaC=parseFloat(prompt('qual nota A'))
+	let notaD=parseFloat(prompt('qual nota A'))
+	let media=(notaA+notaB+notaC+notaD)/4
+	let situacao
+	let convite
+	if(media>=7){
+		alert('aprovado')
+	} else{
+		if((notaA>=7) && (notaB>=7) && (notaC>=7) && (notaD<7)){
+			recup=parseFloat(prompt('qual nova nota'))
+			notaD=recup
+			media=(notaA+notaB+notaC+notaD)/4
+			if(media>=7){alert('aprovado')}
+			else{alert('reprovado')}
+			situacao=media
+		}
+		if((notaA>=7) && (notaB>=7) && (notaC<7) && (notaD<7)){
+			recup=parseFloat(prompt('qual nova nota'))
+			notaC=recup
+			media=(notaA+notaB+notaC+notaD)/4
+			if(media>=7){alert('aprovado')}
+			else{alert('reprovado')}
+			situacao=media
+		}
+		if((notaA>=7) && (notaB<7) && (notaC>=7) && (notaD<7)){
+			recup=parseFloat(prompt('qual nova nota'))
+			notaB=recup
+			media=(notaA+notaB+notaC+notaD)/4
+			if(media>=7){alert('aprovado')}
+			else{alert('reprovado')}
+			situacao=media
+		}
+		if((notaA<7) && (notaB>=7) && (notaC>=7) && (notaD<7)){
+			recup=parseFloat(prompt('qual nova nota'))
+			notaA=recup
+			media=(notaA+notaB+notaC+notaD)/4
+			if(media>=7){alert('aprovado')}
+			else{alert('reprovado')}
+			situacao=media
+		}
+	}
+	//aluno cadastrado//
+
+	let usuario=prompt('e um aluno ou professor?')
+	let funcao=prompt('o que quer ver?')
+	if(usuario=='aluno'){
+		switch(funcao){
+		case 'ver':
+			alert(aluno)
+			alert(situacao)
+			if(situacao>=7){
+				alert('aprovado')
+			} else{alert('reprovado')}
+			break
+		case 'menor nota':
+			if((notaA>=7) && (notaB>=7) && (notaC>=7) && (notaD<7)){
+				alert(notaD)
+			}
+			if((notaA>=7) && (notaB>=7) && (notaC<7) && (notaD>=7)){
+				alert(notaC)
+			}
+			if((notaA>=7) && (nota<7) && (notaC>=7) && (notaD>=7)){
+				alert(notaB)
+			}
+			if((notaA<7) && (notaB>=7) && (notaC>=7) && (notaD>=7)){
+				alert(notaA)
+			}
+			break
+		default:alert('operacao invalida')
+		}
+	if(usuario=='professor'){
+		switch(funcao){
+		case 'chamada':
+			let nome=prompt('qual nome do aluno')
+			let(`O aluno ${nome} está presente.`)
+			break
+		case 'reuniao':
+			let convite=true
+			let nome1=prompt('qual aluno quer marcar reuniao')
+			alert(`O aluno ${nome1} virá a reuniao, chamando ${email}`)
+			break
+		case 'correcao':
+			let atividade = parseFloat(prompt('teste puro'))
+			if(atividade>0){
+				media=media+atividade
+				alert(media)
+			} else{alert('reprovado')}
+			break
+		default:alert('operacao invalida')
+		}
+	}
+	}
+</script>

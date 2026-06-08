@@ -1,0 +1,48 @@
+<script>
+let notaA=parseFloat(prompt(`Qual sua nota em matematica?`))
+let notaB=parseFloat(prompt(`Qual sua nota em fisica?`))
+let notaC=parseFloat(prompt(`Qual sua nota em quimica?`))
+let notaD=parseFloat(prompt(`Qual sua nota em portugues?`))
+let notaE=parseFloat(prompt(`Qual sua nota em ingles?`))
+let notaX
+let media
+
+media=(notaA+notaB+notaC+notaD+notaE)/5
+alert(`A sua media ficou em: ${media}.`)
+
+if(media>=7){
+    alert(`Aprovado!`)
+} else{
+    if(media>=2){
+        alert(`Reprovado, mas ainda ha chance...`)
+        notaX=parseFloat(prompt(`Qual sua nova nota?`))
+        if(notaA<=notaB && notaA<=notaC && notaA<=notaD && notaA<=notaE){
+            notaA=notaX
+        } else{
+            if(notaB<=notaA && notaB<=notaC && notaB<=notaD && notaB<=notaE){
+                notaB=notaX
+            } else{
+                if(notaC<=notaA && notaC<=notaB && notaC<=notaD && notaC<=notaE){
+                    notaC=notaX
+                } else{
+                    if(notaD<=notaA && notaD<=notaB && notaD<=notaC && notaD<=notaE){
+                        notaD=notaX
+                    } else{
+                        notaE=notaX
+                    }
+                }
+            }
+        }
+        media=(notaA+notaB+notaC+notaD+notaE)/5
+        alert(`Sua nova media e: ${media}.`)
+        if(media>=7){
+            alert(`Aprovado!`)
+        } else{
+            alert(`Reprovado!`)
+        }
+    }
+    else{
+        alert(`Reprovado direto!`)
+    }
+}
+</script>

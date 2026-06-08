@@ -1,0 +1,17 @@
+<script>
+	let loginCorreto
+	let senhaCorreta
+	let tentativa=0
+	while(tentativa<3){
+		loginCorreto=prompt('digite o login')
+		senhaCorreta=prompt('digite a senha')
+		if((loginCorreto=='anderson') && (senhaCorreta=='oi')){
+			alert('entrou')
+			break
+		} else{
+			alert('errou, tente novamente!')
+			tentativa++
+		}
+		if(tentativa==3)alert('bloqueado')
+	}
+</script>

@@ -1,0 +1,39 @@
+<html>
+<head>
+<script>
+	let altura;
+	let peso;
+	let imc;
+
+	altura = parseFloat(prompt("Qual sua altura?"));
+	peso = parseFloat(prompt("Qual seu peso?"));
+
+	imc = peso / (altura * altura);
+
+	if (imc < 17) {
+		alert(`O IMC é ${imc.toFixed(2)}. Está muito abaixo do peso.`);
+	}
+	else if (imc >= 17 && imc < 18.5) {
+		alert(`O IMC é ${imc.toFixed(2)}. Está abaixo do peso.`);
+	}
+	else if (imc >= 18.5 && imc < 25) {
+		alert(`O IMC é ${imc.toFixed(2)}. Está no peso normal.`);
+	}
+	else if (imc >= 25 && imc < 30) {
+		alert(`O IMC é ${imc.toFixed(2)}. Está acima do peso.`);
+	}
+	else if (imc >= 30 && imc < 35) {
+		alert(`O IMC é ${imc.toFixed(2)}. Está com Obesidade I.`);
+	}
+	else if (imc >= 35 && imc < 40) {
+		alert(`O IMC é ${imc.toFixed(2)}. Está com Obesidade II (Severa).`);
+	}
+	else if (imc >= 40) {
+		alert(`O IMC é ${imc.toFixed(2)}. Está com Obesidade III (Mórbida).`);
+	}
+	else {
+		alert("Erro nos dados informados.");
+	}
+</script>
+</head>
+</html>

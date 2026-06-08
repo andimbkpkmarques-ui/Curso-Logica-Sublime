@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <title>Semáforo</title>
+</head>
+
+<body>
+  <h1>Semáforo</h1>
+
+  <!-- 1) ISSO AQUI É O BOTÃO (HTML) -->
+  <button id="btnSemaforo">Rodar semáforo</button>
+
+  <script>
+    // 2) COLOQUEI TODO O TEU PROGRAMA DENTRO DE UMA FUNÇÃO
+    //    Assim ele NÃO roda quando a página abre.
+    function rodarSemaforo() {
+      let semaforo; // variável da cor
+      let velmin;   // variável da velocidade
+
+      // 3) ARRUMEI A CONDIÇÃO DO WHILE:
+      //    antes era (semaforo != 0) e nunca terminava.
+      //    agora ele repete ATÉ a pessoa digitar "sair".
+      while (semaforo !== "sair") {
+        semaforo = prompt('Qual a cor? (verde/amarelo/vermelho) ou "sair"');
+
+        // 4) SE CLICAR "Cancelar", prompt retorna null. Aí a gente para o programa.
+        if (semaforo === null) break;
+
+        // 5) PADRONIZA a entrada pra evitar erro com "Verde", " VERDE ", etc.
+        semaforo = semaforo.trim().toLowerCase();
+
+        switch (semaforo) {
+          case 'verde':
+            velmin = parseFloat(prompt('Qual sua velocidade ao passar no semáforo?'));
+
+            if (velmin < 40) {
+              alert('passou');
+            } else {
+              alert('diminua a velocidade');
+            }
+            break;
+
+          case 'amarelo':
+            velmin = parseFloat(prompt('Qual sua velocidade ao passar no semáforo?'));
+
+            if (velmin < 60) {
+              alert('diminua a velocidade ate 40 e tente passar, ta quase fechando.');
+            } else {
+              alert('ta rapido pra kacete em inacio');
+            }
+            break;
+
+          case 'vermelho':
+            alert('fique parado');
+            break;
+
+          case 'sair':
+            alert('fechou');
+            break;
+
+          default:
+            alert('operaçao invalida');
+        }
+      }
+    }
+
+    // 6) ISSO AQUI "LIGA" O BOTÃO COM A FUNÇÃO:
+    //    quando clicar no botão, roda rodarSemaforo().
+    document
+      .getElementById("btnSemaforo")
+      .addEventListener("click", rodarSemaforo);
+  </script>
+</body>
+</html>

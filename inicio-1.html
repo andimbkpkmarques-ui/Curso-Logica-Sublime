@@ -1,0 +1,28 @@
+<html>
+<head>
+<script>
+	var x;
+	var y;
+	var operacao;
+	var resultado;
+
+	operacao=prompt('Escolha uma operacao a realizar - a(adicao), m(multiplicaçao), s(subtraçao), d(divisao).');
+	x=parseInt(prompt('Primeiro valor.'));
+	y=parseInt(prompt('Segundo valor.'));
+
+	if(operacao =='a'){
+		resultado = x+y
+	};
+	if(operacao =='m'){
+		resultado = x*y
+	};
+	if(operacao =='s'){
+		resultado = x-y
+	};
+	if(operacao =='d'){
+		resultado = x/y
+	};
+	alert(`O resultado é ${resultado}.`);
+</script>
+</head>
+</html

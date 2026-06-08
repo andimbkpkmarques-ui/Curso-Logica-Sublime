@@ -1,0 +1,78 @@
+<html>
+<head>
+<script>
+	var x,y,n1,n2,n3,n4,n5;
+
+	x=prompt("Quer mostrar os números a seguir na ordem (d)ireta ou (i)ndireta.");
+	y=parseInt(prompt("Quantos numeros quer que mostre? 2,3,4,5."));
+	
+	if(y=='2'){
+		n1=prompt('Primeiro numero');
+		n2=prompt('Segundo numero.');
+	}
+	if(y=='3'){
+		n1=prompt('Primeiro numero');
+		n2=prompt('Segundo numero.');
+		n3=prompt('Terceiro numero.');
+	}
+	if(y=='4'){
+		n1=prompt('Primeiro numero');
+		n2=prompt('Segundo numero.');
+		n3=prompt('Terceiro numero.');
+		n4=prompt('Quarto numero.');
+	}
+	if(y=='5'){
+		n1=prompt('Primeiro numero');
+		n2=prompt('Segundo numero.');
+		n3=prompt('Terceiro numero.');
+		n4=prompt('Quarto numero.');
+		n5=prompt('Quintro numero.');
+	}
+	if(x=='d' &&  y=='5'){
+		alert(n1);
+		alert(n2);
+		alert(n3);
+		alert(n4);
+		alert(n5);
+	}
+	if(x=='d' &&  y=='4'){
+		alert(n1);
+		alert(n2);
+		alert(n3);
+		alert(n4);
+	}
+	if(x=='d' &&  y=='3'){
+		alert(n1);
+		alert(n2);
+		alert(n3);
+	}
+	if(x=='d' &&  y=='2'){
+		alert(n1);
+		alert(n2);
+	}
+
+	if(x=='i' && y=='5'){
+		alert(n5);
+		alert(n4);
+		alert(n3);
+		alert(n2);
+		alert(n1);
+	}
+	if(x=='i' &&  y=='4'){
+		alert(n4);
+		alert(n3);
+		alert(n2);
+		alert(n1);
+	}
+	if(x=='i' &&  y=='3'){
+		alert(n3);
+		alert(n2);
+		alert(n1);
+	}
+	if(x=='i' &&  y=='2'){
+		alert(n2);
+		alert(n1);
+	}
+</script>
+</head>
+</html>

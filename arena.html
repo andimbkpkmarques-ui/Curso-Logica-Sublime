@@ -1,0 +1,71 @@
+<script>
+
+let campeao = prompt('Qual seu nome?')
+let inimigo = parseInt(prompt("Quantos inimigos voce vai enfrentar?"))
+
+let situacao
+let dano
+
+let kill = 0
+let death = 0
+
+let vidaInimigo = 100
+
+while (inimigo > 0) {
+
+    situacao = prompt('Vai enfrentar? (sim ou nao)')
+
+    if (situacao == 'sim') {
+
+        dano = parseFloat(prompt('Quanto de dano deu?'))
+
+        if (dano > 0) {
+
+            vidaInimigo = vidaInimigo - dano
+
+            alert(`Voce causou ${dano} de dano`)
+            alert(`Vida restante do inimigo: ${vidaInimigo}`)
+
+            if (vidaInimigo <= 0) {
+
+                inimigo--
+                kill++
+
+                alert(`Parabens ${campeao}, matou seu inimigo!`)
+                alert(`Ainda restam ${inimigo} inimigos.`)
+
+                // RESETANDO A VIDA DO PRÓXIMO INIMIGO
+                vidaInimigo = 100
+            }
+
+        } else {
+
+            death++
+
+            alert(`Poxa soldado, morreu!`)
+        }
+
+    } else {
+
+        alert(`Cuidado soldado, ainda tem inimigos no jogo: ${inimigo}`)
+    }
+
+    if (kill > 0) {
+
+        alert(`Kills: ${kill} | Deaths: ${death}`)
+    }
+}
+
+if (kill == 5) {
+
+    alert('PENTA KILL!')
+
+} else if (kill > 2) {
+
+    alert('Voce carregou o time.')
+
+} else {
+
+    alert('Bom jogo.')
+}
+</script>
