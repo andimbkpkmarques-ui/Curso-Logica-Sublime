@@ -1,0 +1,43 @@
+<script>
+	let numero 
+	let resultado = parseFloat(prompt(`Valor inicial!`))
+	let operacao
+
+	while(operacao != 'nao'){
+		operacao = prompt("Qual operacao? (+,-,*,/,**, ou 'nao' para sair).")
+		switch(operacao){
+		case '+':
+			numero = parseFloat(prompt('Qual número?'))
+			resultado += numero
+			alert(`O resultado é: ${resultado}.`)
+			break
+		case '-':
+			numero = parseFloat(prompt('Qual número?'))
+			resultado -= numero
+			alert(`O resultado é: ${resultado}.`)
+			break
+		case '*':
+			numero = parseFloat(prompt('Qual número?'))
+			resultado *= numero
+			alert(`O resultado é: ${resultado}.`)
+			break
+		case '/':
+			numero = parseFloat(prompt('Qual número?'))
+			resultado /= numero
+			alert(`O resultado é: ${resultado}.`)
+			break
+		case '**':
+			numero = parseFloat(prompt('Qual número?'))
+			resultado **= numero
+			alert(`O resultado é: ${resultado}.`)
+			break
+		case 'nao':
+			alert(`Ira sair da calculadora, o resultado final foi: ${resultado}.`)
+			break
+		default:
+			alert(`Operação invalida!!`)
+			break
+		}
+	}
+	alert(`O resultado até o final do uso da calculadora foi: ${resultado}!`)
+</script>
