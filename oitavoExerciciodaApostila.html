@@ -1,0 +1,28 @@
+<html>
+<head>
+<script>
+let opeMat=prompt('Qual operação quer fazer?(sub,a,d,m,p,resto ou sair)') 
+let n1=parseFloat(prompt('Qual primeiro numero?')) 
+let n2=parseFloat(prompt('Qual segundo numero?')) 
+let resultado 
+switch(opeMat){ 
+	case 'sub': resultado=n1-n2; alert(resultado); 
+	break; 
+	case 'a': resultado=n1+n2; alert(resultado); 
+	break; 
+	case 'd': resultado=n1/n2; alert(resultado); 
+	break; 
+	case 'm': resultado=n1*n2; alert(resultado); 
+	break; 
+	case 'p': resultado=n1**n2; alert(resultado); 
+	break; 
+	case 'resto': resultado=n1%n2; alert(resultado); 
+	break; 
+	case 'sair': alert('Você saiu!'); 
+	break; 
+	default: alert('Operação invalida!'); 
+	break; 
+} 
+</script> 
+</head>
+</html>
