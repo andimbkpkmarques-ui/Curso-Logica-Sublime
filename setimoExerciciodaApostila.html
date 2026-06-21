@@ -1,0 +1,16 @@
+<html>
+<head>
+<script>
+	/* O mesmo código de imc mas com uso de lógica booleana dando eficiência (já começo de correção dos códigos).*/
+	let peso = parseFloat(prompt('Qual seu peso?'))
+	let altura = parseFloat(prompt('Qual sua altura?'))
+	let imc = peso/(altura**2)
+	if(imc>=40){alert(`O resultado do imc e: ${imc}`)}
+		else if((imc<=39.9) && (imc>=35)){alert(`O resultado do imc e: ${imc}`)}
+			else if((imc<=34.9) && (imc>=30)){alert(`O resultado do imc e: ${imc}`)}
+				else if((imc<=29.9) && (imc>=25)){alert(`O resultado do imc e: ${imc}`)}
+					else if((imc<=24.9) && (imc>=20)){alert(`O resultado do imc e: ${imc}`)}
+						else {{alert(`Ta magro em!`)}}
+</script>
+</head>
+</html>
