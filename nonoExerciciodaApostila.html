@@ -1,0 +1,53 @@
+<html>
+<head>
+<script>
+
+let n1 = parseFloat(prompt('Qual número 1?'))
+let n2
+let resultado
+
+let opMat = prompt('Qual operação deseja? (+,-,*,/,** ou sair)')
+
+while(opMat != 'sair'){
+
+    n2 = parseFloat(prompt('Qual número para realizar a operação?'))
+
+    switch(opMat){
+
+        case '+':
+            resultado = n1 + n2
+            break
+
+        case '-':
+            resultado = n1 - n2
+            break
+
+        case '*':
+            resultado = n1 * n2
+            break
+
+        case '/':
+            resultado = n1 / n2
+            break
+
+        case '**':
+            resultado = n1 ** n2
+            break
+
+        default:
+            alert('Operação inválida!')
+            continue
+    }
+
+    alert(`Resultado: ${resultado}`)
+
+    n1 = resultado
+
+    opMat = prompt('Qual operação deseja? (+,-,*,/,** ou sair)')
+}
+
+alert('Calculadora encerrada.')
+
+</script>
+</head>
+</html>
