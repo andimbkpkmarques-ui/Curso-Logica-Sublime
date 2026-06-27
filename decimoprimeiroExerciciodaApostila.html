@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Maior e Menor Número</title>
+</head>
+<body>
+
+<script>
+
+let maior = parseFloat(prompt('Digite o primeiro número:'));
+let menor = maior;
+
+let permanecer = '';
+
+while (permanecer.toLowerCase() !== 'sair') {
+
+    let entrada = parseFloat(prompt('Digite outro número:'));
+
+    if (entrada > maior) {
+        maior = entrada;
+    }
+
+    if (entrada < menor) {
+        menor = entrada;
+    }
+
+    alert(`Maior número: ${maior}\nMenor número: ${menor}`);
+
+    permanecer = prompt('Digite "sair" para encerrar ou pressione OK para continuar:');
+
+    if (permanecer === null) {
+        permanecer = 'sair';
+    }
+}
+
+alert(`Resultado final:\nMaior número: ${maior}\nMenor número: ${menor}`);
+
+</script>
+
+</body>
+</html>
