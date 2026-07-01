@@ -1,0 +1,46 @@
+<html>
+<head>
+<Script>
+	let n1 = parseInt(prompt('qual numero?'))
+	let valor = n1
+	let fatorial = 1
+	let calculadora=prompt('qual operação quer? (+,-,*,/,**,%,!, sair)')
+	let numero1
+	let resultado = n1
+	
+	while(calculadora!='sair'){
+		if(calculadora=='!'){
+			while(valor>1){
+			fatorial = fatorial * (valor*(valor-1))
+			valor=valor-2
+			}
+			alert(`O resultado e: ${fatorial}.`)
+			valor=n1
+		}
+		else{
+			numero1=parseFloat(prompt('qual outro numero?'))
+			switch(calculadora){
+				case '+': resultado = resultado + numero1;
+					break;
+				case '-': resultado = resultado - numero1;
+					break;
+				case '*': resultado = resultado * numero1;
+					break;
+				case '/': resultado = resultado / numero1;
+					break;
+				case '**': resultado = resultado ** numero1;
+					break;
+				case '%': resultado = resultado % numero1;
+					break;
+				case 'sair': break;
+		
+				default: alert(`Operacao invalida!`)
+				}
+			alert(`O resultado e: ${resultado}.`)
+		}
+		calculadora=prompt('qual operação quer? (+,-,*,/,**,%,!, sair)')
+		fatorial = 1
+		}				
+</script>
+</head>
+</html>
